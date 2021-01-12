@@ -177,7 +177,7 @@ while True:
         x_1[:] = x[:]
         y_1[:] = y[:]
 
-    if rank == [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]:
+    if sum(rank) <= 1:
         showmap()
         print("끝")
         break
