@@ -167,7 +167,6 @@ while True:
             chromo[num][3] = y[num]
             rank[num] = chromo[num][3]
         showmap()
-        sleep(0.25)
         if x[:] == x_1[:] and y[:] == y_1[:]:
             break
         x_1[:] = x[:]
