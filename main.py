@@ -45,21 +45,25 @@ def runchromo(num, i):
 
 def showmap():
     global gene, chromo, select
-    os.system("cls")
-    print(f"GEN : {gene}")
-    print(chromo)
-    print(select)
+    #os.system("cls")
+    frame = ""
+    frame += f"GEN : {gene}\n"
+    frame += f"{chromo}\n"
+    frame += f"{select}\n"
     for i in range(10):
         for h in range(10):
             for j in range(7):
                 if map1[h][i][j] == 1:
-                    print("■", end=" ")
+                    frame += "■ "
                 elif map1[h][i][j] == 2:
-                    print("★", end=" ")
+                    frame += "★ "
                 else:
-                    print("□", end=" ")
-            print(" ", end=" ")
-        print("\n")
+                    frame += "□ "
+            frame += " "
+        frame += "\n\n"
+    print("\x1b[2J", end='')
+    print(frame)
+    print('\x1b[H', end='')
 
 
 def left(num):
