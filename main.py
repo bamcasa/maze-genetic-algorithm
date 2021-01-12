@@ -167,13 +167,13 @@ while True:
             chromo[num][3] = y[num]
             rank[num] = chromo[num][3]
         showmap()
-        sleep(0.25)
+        sleep(0.2)
         if x[:] == x_1[:] and y[:] == y_1[:]:
             break
         x_1[:] = x[:]
         y_1[:] = y[:]
 
-    if rank == [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]:
+    if sum(rank) <= 1:
         showmap()
         print("끝")
         break
